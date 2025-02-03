@@ -1,0 +1,339 @@
+body {
+  background-color: #111;
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #e0e1dd;
+  overflow-x: hidden;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  font-family: "Merienda", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.score-container .high-score p {
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f;
+}
+
+.score-container .current-score p {
+  color: #00c3ff;
+  text-shadow: 0 0 10px #00c3ff;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+#game-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+#game-title h3 {
+  font-size: 4rem;
+  color: #ff007f;
+  text-shadow: 0 0 20px #ff007f;
+  margin: 10px 0;
+  animation: pulse 1.5s infinite alternate;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-board .box {
+  height: 13rem;
+  width: 13rem;
+  border: 2px rgba(255, 255, 255, 0.533) solid;
+  border-radius: 10px;
+}
+
+.game-board .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding-top: 2rem;
+}
+
+.game-board .options .box {
+  height: 8rem;
+  width: 8rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.game-board .options .box.active {
+  border-color: #4672fe;
+}
+
+.game-board .options .box:hover {
+  border-color: #4672fe;
+}
+
+.game-board .game-buttons button,
+.button-general {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e1dd;
+  outline: none;
+  background-color: #e0e1dd;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.game-board .game-buttons button:hover,
+.button-general:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  animation: normal;
+}
+
+.game-board .game-buttons .restart-game {
+  border: 1px #4672fe solid;
+  color: white;
+  background-color: transparent;
+}
+
+/* game instruction modal start */
+.game-instruction-modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-instruction-modal div {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+
+.game-instruction-modal h3,
+h2 {
+  text-align: center;
+}
+/* game instruction modal end */
+
+.game-notification-modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #11111152;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.game-notification-modal div {
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: #1b263b;
+ 
+}
+
+.game-notification-modal div p {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 780px) {
+  .main-container {
+    margin-top: 1.5rem;
+  }
+
+  .score-container {
+    font-size: 1rem;
+  }
+
+  #game-title h3 {
+    font-size: 2.5rem;
+  }
+
+  .game-board .box {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .game-board .options {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .game-board .options .box {
+    flex-wrap: wrap;
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+
+
+
+
+/* 
+body {
+  background-color: #0d0d0d;
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  color: #f5f5f5;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  font-family: "Merienda", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.score-container .high-score p {
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f;
+}
+
+.score-container .current-score p {
+  color: #00c3ff;
+  text-shadow: 0 0 10px #00c3ff;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+#game-title h3 {
+  font-size: 4rem;
+  color: #ff007f;
+  text-shadow: 0 0 20px #ff007f;
+  margin: 10px 0;
+  animation: pulse 1.5s infinite alternate;
+}
+
+.game-board .box {
+  height: 14rem;
+  width: 14rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s;
+}
+
+.game-board .box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.game-board .options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding-top: 2rem;
+}
+
+.game-board .options .box {
+  height: 7rem;
+  width: 7rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.game-board .options .box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.game-board .game-buttons button {
+  padding: 12px 25px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.check-guess {
+  background: linear-gradient(45deg, #ff007f, #ff4b2b);
+  color: white;
+  box-shadow: 0 0 15px #ff007f;
+}
+
+.restart-game {
+  background: linear-gradient(45deg, #00c3ff, #007bff);
+  color: white;
+  box-shadow: 0 0 15px #00c3ff;
+}
+
+.game-buttons button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+  
+@media screen and (max-width: 780px) {
+  .score-container {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+  }
+
+  #game-title h3 {
+    font-size: 3rem;
+  }
+
+  .game-board .box {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .game-board .options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .game-board .options .box {
+    height: 6rem;
+    width: 6rem;
+  }
+} */
