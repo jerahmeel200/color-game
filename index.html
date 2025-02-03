@@ -7,13 +7,10 @@
     <!-- css -->
     <link rel="stylesheet" href="main.css" />
 
-     
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-
-     
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,15 +37,12 @@
       <div id="game-title">
         <h3>COLOR GAME</h3>
       </div>
- 
+
       <div class="game-board">
         <div class="main-color-box box" data-testid="colorBox"></div>
 
-        <div class="options">
-        
-        </div>
+        <div class="options"></div>
 
-         
         <div class="game-buttons">
           <button class="check-guess" onclick="validateUserChoice()">
             Check Guess
@@ -60,7 +54,6 @@
       </div>
     </div>
 
-    
     <div class="game-instruction-modal" data-testid="gameInstructions">
       <div>
         <div>
@@ -75,27 +68,22 @@
               Score points for correct guesses and try to beat your high score!
             </li>
           </ol>
-
-           
         </div>
 
-        <button class="button-general lets-play-btn">PLAY NOW!!🎮 </button>
+        <button class="button-general lets-play-btn">PLAY NOW!!🎮</button>
       </div>
     </div>
-     
 
-    <!-- game notification modal start  -->
     <div class="game-notification-modal" data-testid="gameStatus">
       <div>
-         
+        
       </div>
     </div>
-     
-
     
-    <div id="winSound" src="/"></div>
-    <div id="failedSound" src="/"></div>
+    <audio id="winSound" src=""></audio>
+    <audio id="failedSound" src=""></audio>
   </body>
+
 
   <script src="./index.js"></script>
 </html>

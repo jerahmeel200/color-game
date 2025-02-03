@@ -8,8 +8,7 @@ let correctColorValue = null;
 const constants = {
   highScore: "highScore",
 };
-
-// target html elements
+ 
 const masterBox = document.querySelector(".game-board .main-color-box");
 const optionsBoxContainer = document.querySelector(".game-board .options");
 const checkGuessButton = document.querySelector(".game-buttons .check-guess");
